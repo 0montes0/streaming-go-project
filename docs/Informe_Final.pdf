@@ -1,0 +1,69 @@
+Informe Final del Proyecto
+Sistema de Gestión de Streaming en Go
+1. Introducción
+El presente proyecto consiste en el desarrollo de un sistema de gestión de streaming, que permite registrar usuarios, gestionar contenidos audiovisuales (películas y series), reproducirlos y calificarlos. Implementado en Go, el sistema aplica programación orientada a objetos, manejo de errores, interfaces y concurrencia para atender múltiples solicitudes. Este proyecto integra los conocimientos teóricos y prácticos adquiridos durante el curso, representando un producto funcional que demuestra habilidades en diseño y desarrollo de software.
+2. Justificación
+El streaming de contenidos digitales es una tendencia consolidada en la industria tecnológica, debido a la creciente demanda de acceso inmediato a medios audiovisuales. Elegir Go para esta implementación es estratégico, ya que ofrece eficiencia en la concurrencia y facilidad para construir servicios web escalables. Este proyecto permite aplicar conceptos fundamentales de programación funcional y orientada a objetos, facilitando la mantenibilidad, ampliación y escalabilidad del sistema.
+3. Integración de las Cuatro Unidades del Curso
+El desarrollo de este proyecto refleja la integración de los contenidos y habilidades adquiridas a lo largo de las cuatro unidades del curso:
+•	Unidad 1: Programación Orientada a Objetos — Definición de estructuras y métodos, encapsulamiento y modularidad en la gestión de usuarios, contenidos y calificaciones.
+•	Unidad 2: Estructuras de Datos e Interfaces — Uso de slices y punteros para manejar colecciones, implementación de interfaces para abstraer comportamientos y promover el desacoplamiento.
+•	Unidad 3: Manejo de Errores y Concurrencia — Validaciones robustas para garantizar integridad de datos y uso de la concurrencia nativa de Go para atender múltiples solicitudes HTTP simultáneamente.
+•	Unidad 4: Servicios Web REST y JSON — Diseño e implementación de ocho servicios web RESTful que permiten interacción remota con el sistema a través de JSON, facilitando la interoperabilidad y escalabilidad.
+Esta integración asegura que el proyecto no solo cumple con los requisitos académicos, sino que representa un sistema realista y funcional para la gestión de streaming.
+4. Análisis y Diseño
+4.1 Objetivos del Sistema
+•	Registrar y gestionar usuarios con validación de datos.
+•	Administrar un catálogo de contenidos (películas y series).
+•	Proveer funcionalidad para la reproducción simulada de contenidos.
+•	Permitir calificar contenidos con validación y comentarios.
+•	Ofrecer una interfaz básica por consola y servicios web REST para acceso remoto.
+4.2 Módulos del Sistema
+Módulo	Descripción
+Gestión de Usuarios	Registro, validación y listado de usuarios
+Gestión de Contenidos	Creación, almacenamiento y consulta del catálogo de videos
+Reproducción	Simulación de reproducción de contenido
+Calificaciones	Agregar y mostrar calificaciones con validación y comentarios
+Servicios Web REST	Endpoints para acceso y manipulación de usuarios, contenidos y calificaciones
+
+4.3 Diagrama de Clases
+ 
+ 
+5. Implementación
+5.1 Lenguaje y Herramientas
+•	Lenguaje: Go (Golang)
+•	Control de versiones: Git y GitHub
+•	Paquetes: net/http, github.com/gorilla/mux
+•	IDE: Visual Studio Code
+•	Módulos de Go para gestión de dependencias
+5.2 Servicios Web Implementados
+1.	GET /videos — Listar videos disponibles.
+2.	GET /stream?id= — Transmitir video para reproducción.
+3.	POST /usuarios — Registrar nuevo usuario.
+4.	GET /usuarios — Listar usuarios registrados.
+5.	POST /calificaciones — Agregar calificación a contenido.
+6.	GET /calificaciones — Listar calificaciones.
+7.	POST /contenidos — Agregar nuevo contenido.
+8.	GET /contenidos — Listar contenidos.
+5.3 Concurrencia
+El servidor HTTP aprovecha las goroutines para manejar múltiples solicitudes simultáneas, asegurando respuesta eficiente y sin bloqueos.
+6. Pruebas y Resultados
+6.1 Pruebas Unitarias
+Se implementaron pruebas para validar:
+•	Prevención de usuarios duplicados.
+•	Validación correcta de rango de estrellas en calificaciones.
+•	Búsqueda y listado de usuarios y contenidos.
+6.2 Pruebas de Integración
+Se verificaron interacciones entre módulos, como:
+•	Registro de usuarios seguido de calificación de contenido.
+•	Reproducción simulada de videos desde el catálogo.
+6.3 Pruebas Funcionales
+•	Uso del menú por consola para probar funcionalidades.
+•	Uso de Postman para probar endpoints REST, validando entradas y salidas JSON.
+Los resultados confirmaron la correcta integración y funcionamiento del sistema.
+7. Visualización del Futuro
+Se presenta una visualización conceptual basada en la integración de tecnologías emergentes con el sistema de streaming actual. Se proyecta la incorporación de inteligencia artificial para recomendaciones personalizadas, integración con plataformas de realidad aumentada para experiencias inmersivas, y uso de blockchain para seguridad y gestión de derechos digitales.
+Esta visión representa una evolución natural hacia sistemas más inteligentes, seguros y centrados en el usuario, aplicables en ámbitos de entretenimiento, educación y comunicación global.
+8. Conclusiones
+Este proyecto permitió consolidar conocimientos en programación orientada a objetos, estructuras de datos, manejo de errores y concurrencia, aplicándolos en un sistema realista y funcional. La incorporación de servicios web REST amplió la accesibilidad y escalabilidad del sistema.
+Se identificaron áreas para mejoras futuras, como interfaz gráfica, seguridad avanzada y autenticación de usuarios. En general, el trabajo final demuestra la capacidad para diseñar, implementar y probar sistemas complejos, integrando teoría y práctica en soluciones tecnológicas.
